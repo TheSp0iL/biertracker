@@ -1,0 +1,56 @@
+name: Kicktipp Sync
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Baut die Daten jede Stunde neu
+  workflow_dispatch: # Erlaubt manuelles Starten
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Fetch Kicktipp Data
+        run: |
+          python -c "
+          import urllib.request, re, json, datetime
+
+          url = 'https://www.kicktipp.de/schlappesaicher-gmbh/gesamtuebersicht'
+          req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+
+          try:
+              html = urllib.request.urlopen(req).read().decode('utf-8')
+              rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html, re.DOTALL)
+              players = []
+
+              for row in rows:
+                  tds = re.findall(r'<td[^>]*>(.*?)</td>', row, re.DOTALL)
+                  if len(tds) >= 2:
+                      clean_rank = re.sub(r'<[^>]+>', '', tds[0]).strip()
+                      clean_name = re.sub(r'<[^>]+>', '', tds[1]).strip()
+                      
+                      rank_match = re.search(r'\d+', clean_rank)
+                      if rank_match and clean_name:
+                          players.append({'rank': int(rank_match.group()), 'name': clean_name})
+
+              data = {
+                  'updatedAt': datetime.datetime.now().strftime('%d.%m.%Y %H:%M'),
+                  'players': players
+              }
+
+              with open('data.json', 'w', encoding='utf-8') as f:
+                  json.dump(data, f, ensure_ascii=False, indent=2)
+
+              print(f'Erfolgreich {len(players)} Spieler gespeichert.')
+          except Exception as e:
+              print('Fehler:', e)
+          "
+
+      - name: Commit & Push
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add data.json
+          git commit -m "Auto update kicktipp data" || exit 0
+          git push

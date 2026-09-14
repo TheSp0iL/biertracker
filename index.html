@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bier-Tracker | Schlappesaicher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f1115;
+            --card-bg: #1a1d24;
+            --beer-gold: #f59e0b;
+            --beer-foam: #fef3c7;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #2e3440;
+            --success-green: #10b981;
+            --error-red: #ef4444;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .header { text-align: center; }
+        .header h1 { font-size: 1.8rem; font-weight: 800; color: var(--beer-foam); margin-bottom: 8px; }
+        .header p { color: var(--text-muted); font-size: 0.95rem; }
+
+        .debtor-tag {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--beer-gold);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 6px;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .counter-card {
+            background: linear-gradient(145deg, #1f232c, var(--card-bg));
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .counter-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, var(--beer-gold), var(--beer-foam));
+        }
+
+        .beer-icon { font-size: 3rem; margin-bottom: 8px; display: inline-block; }
+        .counter-number { font-size: 4.5rem; font-weight: 800; color: var(--beer-gold); line-height: 1; margin-bottom: 8px; }
+        .counter-label { font-size: 1.1rem; font-weight: 600; color: var(--text-main); text-transform: uppercase; letter-spacing: 1px; }
+
+        .checker-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px;
+        }
+
+        .checker-card h2 { font-size: 1.2rem; margin-bottom: 16px; color: var(--beer-foam); }
+        .input-group { display: flex; gap: 8px; margin-bottom: 16px; }
+
+        input[type="text"] {
+            flex: 1;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 14px 16px;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        input[type="text"]:focus { border-color: var(--beer-gold); }
+
+        button {
+            background-color: var(--beer-gold);
+            color: #000;
+            font-weight: 600;
+            border: none;
+            padding: 0 20px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        button:hover { background-color: var(--beer-foam); }
+
+        .result-box {
+            display: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .result-box.win { display: block; background-color: rgba(16, 185, 129, 0.1); border: 1px solid var(--success-green); color: var(--success-green); }
+        .result-box.lose { display: block; background-color: rgba(239, 68, 68, 0.1); border: 1px solid var(--error-red); color: var(--error-red); }
+
+        .status-text { font-size: 0.85rem; color: var(--text-muted); margin-top: 8px; }
+        .footer { text-align: center; font-size: 0.8rem; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>🍺 Das Bier-Versprechen</h1>
+        <p>Live-Schuldenregister der Tippspiel-Saison</p>
+        <div class="debtor-tag">Bierspender: MannohneHals</div>
+    </div>
+
+    <div class="counter-card">
+        <div class="beer-icon">🍻</div>
+        <div class="counter-number" id="totalCrates">--</div>
+        <div class="counter-label">Kästen Bier zu zahlen</div>
+        <div id="statusText" class="status-text">Lade Daten...</div>
+    </div>
+
+    <div class="checker-card">
+        <h2>Steht dir ein Kasten zu?</h2>
+        <div class="input-group">
+            <input type="text" id="usernameInput" placeholder="Dein Kicktipp-Name..." onkeypress="handleKeyPress(event)">
+            <button onclick="checkBeerStatus()">Prüfen</button>
+        </div>
+        <div id="resultBox" class="result-box"></div>
+    </div>
+
+    <div class="footer">Runde: schlappesaicher-gmbh</div>
+</div>
+
+<script>
+    const debtorName = "MannohneHals";
+    let leaderboard = [];
+
+    async function loadData() {
+        const statusEl = document.getElementById('statusText');
+        try {
+            // Lädt die automatisch erstellte Datei aus dem GitHub Repo
+            const response = await fetch('./data.json?t=' + new Date().getTime());
+            if (!response.ok) throw new Error("Datei nicht gefunden");
+            
+            const data = await response.json();
+            leaderboard = data.players;
+
+            updateDashboard(data.updatedAt);
+        } catch (e) {
+            statusEl.innerText = "Erst-Synchronisierung läuft... (Bitte ca. 2 Min warten)";
+        }
+    }
+
+    function updateDashboard(updatedAt) {
+        const debtorObj = leaderboard.find(p => p.name.toLowerCase() === debtorName.toLowerCase());
+        const statusEl = document.getElementById('statusText');
+        
+        if (debtorObj) {
+            const cratesToPay = debtorObj.rank - 1;
+            document.getElementById('totalCrates').innerText = cratesToPay;
+            statusEl.innerText = `Stand: ${updatedAt || 'Aktuell'} (${leaderboard.length} Tipper)`;
+        } else {
+            document.getElementById('totalCrates').innerText = "?";
+            statusEl.innerText = `"${debtorName}" noch nicht gefunden.`;
+        }
+    }
+
+    function checkBeerStatus() {
+        const inputName = document.getElementById('usernameInput').value.trim();
+        const resultBox = document.getElementById('resultBox');
+
+        if (!inputName || leaderboard.length === 0) return;
+
+        const player = leaderboard.find(p => p.name.toLowerCase() === inputName.toLowerCase());
+        const debtor = leaderboard.find(p => p.name.toLowerCase() === debtorName.toLowerCase());
+
+        if (!player) {
+            resultBox.className = "result-box lose";
+            resultBox.innerHTML = "❌ Name nicht gefunden. Exakte Schreibweise beachten!";
+            return;
+        }
+
+        if (player.name.toLowerCase() === debtorName.toLowerCase()) {
+            resultBox.className = "result-box lose";
+            resultBox.innerHTML = `😅 Du bist MannohneHals! Du musst aktuell <strong>${debtor.rank - 1} Kasten/Kästen</strong> zahlen!`;
+        } else if (player.rank < debtor.rank) {
+            resultBox.className = "result-box win";
+            resultBox.innerHTML = `🎉 Glückwunsch ${player.name}! Du stehst auf Platz ${player.rank} (vor Platz ${debtor.rank}) und kriegst einen Kasten von MannohneHals! 🍺`;
+        } else {
+            resultBox.className = "result-box lose";
+            resultBox.innerHTML = `💸 Schade ${player.name}. Du stehst auf Platz ${player.rank} (hinter MannohneHals auf Platz ${debtor.rank}). Aktuell kein Bier für dich!`;
+        }
+    }
+
+    function handleKeyPress(e) { if (e.key === 'Enter') checkBeerStatus(); }
+
+    loadData();
+</script>
+
+</body>
+</html>

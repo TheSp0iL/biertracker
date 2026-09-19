@@ -1,56 +1,56 @@
 {
-  "updatedAt": "19.09.2026 19:04",
+  "updatedAt": "19.09.2026 21:55",
   "players": [
     {
       "rank": 1,
-      "name": "SektQueen"
-    },
-    {
-      "rank": 2,
-      "name": "Adrian"
-    },
-    {
-      "rank": 2,
-      "name": "Alex"
-    },
-    {
-      "rank": 4,
       "name": "Sedl"
     },
     {
+      "rank": 2,
+      "name": "SektQueen"
+    },
+    {
+      "rank": 3,
+      "name": "Adrian"
+    },
+    {
+      "rank": 3,
+      "name": "Alex"
+    },
+    {
       "rank": 5,
+      "name": "VT"
+    },
+    {
+      "rank": 6,
+      "name": "Wolle"
+    },
+    {
+      "rank": 6,
       "name": "Elkebelke"
     },
     {
-      "rank": 6,
+      "rank": 8,
       "name": "EuroEddi"
     },
     {
-      "rank": 6,
+      "rank": 8,
       "name": "SK"
     },
     {
       "rank": 8,
-      "name": "VT"
-    },
-    {
-      "rank": 9,
-      "name": "Allgäuer57"
-    },
-    {
-      "rank": 10,
-      "name": "Wolle"
-    },
-    {
-      "rank": 11,
       "name": "MiaSanBier"
     },
     {
-      "rank": 12,
+      "rank": 11,
       "name": "Brasil"
     },
     {
-      "rank": 12,
+      "rank": 11,
+      "name": "Allgäuer57"
+    },
+    {
+      "rank": 13,
       "name": "Marlen"
     },
     {

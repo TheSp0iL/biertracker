@@ -1,53 +1,49 @@
 {
-  "updatedAt": "19.09.2026 13:39",
+  "updatedAt": "19.09.2026 16:54",
   "players": [
     {
       "rank": 1,
+      "name": "SektQueen"
+    },
+    {
+      "rank": 2,
       "name": "Adrian"
     },
     {
-      "rank": 1,
+      "rank": 2,
       "name": "Alex"
     },
     {
-      "rank": 3,
-      "name": "VT"
-    },
-    {
       "rank": 4,
-      "name": "Wolle"
+      "name": "Sedl"
     },
     {
       "rank": 5,
+      "name": "Elkebelke"
+    },
+    {
+      "rank": 6,
       "name": "EuroEddi"
     },
     {
       "rank": 6,
-      "name": "SektQueen"
-    },
-    {
-      "rank": 7,
       "name": "SK"
     },
     {
       "rank": 8,
+      "name": "VT"
+    },
+    {
+      "rank": 9,
       "name": "Allgäuer57"
     },
     {
-      "rank": 8,
-      "name": "MiaSanBier"
-    },
-    {
       "rank": 10,
-      "name": "Salimba"
+      "name": "Wolle"
     },
     {
       "rank": 11,
-      "name": "Lady-Luck"
-    },
-    {
-      "rank": 12,
-      "name": "Elkebelke"
+      "name": "MiaSanBier"
     },
     {
       "rank": 12,
@@ -55,23 +51,27 @@
     },
     {
       "rank": 12,
-      "name": "Sedl"
-    },
-    {
-      "rank": 12,
-      "name": "Biervorzehn"
-    },
-    {
-      "rank": 16,
       "name": "Marlen"
     },
     {
+      "rank": 14,
+      "name": "Lady-Luck"
+    },
+    {
+      "rank": 15,
+      "name": "Salimba"
+    },
+    {
+      "rank": 16,
+      "name": "Biervorzehn"
+    },
+    {
       "rank": 17,
-      "name": "Mino"
+      "name": "MannohneHals"
     },
     {
       "rank": 18,
-      "name": "MannohneHals"
+      "name": "Mino"
     }
   ]
 }

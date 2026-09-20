@@ -1,5 +1,5 @@
 {
-  "updatedAt": "20.09.2026 19:58",
+  "updatedAt": "20.09.2026 22:11",
   "players": [
     {
       "rank": 1,
@@ -18,24 +18,24 @@
       "name": "EuroEddi"
     },
     {
-      "rank": 5,
+      "rank": 4,
+      "name": "Marlen"
+    },
+    {
+      "rank": 6,
       "name": "Alex"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "Wolle"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "Elkebelke"
     },
     {
-      "rank": 8,
-      "name": "VT"
-    },
-    {
       "rank": 9,
-      "name": "Marlen"
+      "name": "VT"
     },
     {
       "rank": 10,

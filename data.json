@@ -1,5 +1,5 @@
 {
-  "updatedAt": "20.09.2026 17:07",
+  "updatedAt": "20.09.2026 19:58",
   "players": [
     {
       "rank": 1,
@@ -15,27 +15,27 @@
     },
     {
       "rank": 4,
-      "name": "Alex"
-    },
-    {
-      "rank": 5,
-      "name": "Elkebelke"
-    },
-    {
-      "rank": 6,
-      "name": "VT"
-    },
-    {
-      "rank": 7,
       "name": "EuroEddi"
     },
     {
-      "rank": 7,
-      "name": "Marlen"
+      "rank": 5,
+      "name": "Alex"
+    },
+    {
+      "rank": 6,
+      "name": "Wolle"
+    },
+    {
+      "rank": 6,
+      "name": "Elkebelke"
+    },
+    {
+      "rank": 8,
+      "name": "VT"
     },
     {
       "rank": 9,
-      "name": "Wolle"
+      "name": "Marlen"
     },
     {
       "rank": 10,

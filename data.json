@@ -1,5 +1,5 @@
 {
-  "updatedAt": "10.10.2026 16:00",
+  "updatedAt": "10.10.2026 20:22",
   "players": [
     {
       "rank": 1,
@@ -15,34 +15,34 @@
     },
     {
       "rank": 4,
-      "name": "EuroEddi"
-    },
-    {
-      "rank": 4,
       "name": "Marlen"
     },
     {
-      "rank": 6,
-      "name": "Alex"
-    },
-    {
-      "rank": 7,
-      "name": "Wolle"
-    },
-    {
-      "rank": 7,
-      "name": "Elkebelke"
-    },
-    {
-      "rank": 9,
+      "rank": 5,
       "name": "VT"
     },
     {
-      "rank": 10,
-      "name": "SK"
+      "rank": 6,
+      "name": "Wolle"
+    },
+    {
+      "rank": 6,
+      "name": "Elkebelke"
+    },
+    {
+      "rank": 8,
+      "name": "Alex"
+    },
+    {
+      "rank": 9,
+      "name": "Allgäuer57"
     },
     {
       "rank": 10,
+      "name": "EuroEddi"
+    },
+    {
+      "rank": 11,
       "name": "MiaSanBier"
     },
     {
@@ -50,20 +50,20 @@
       "name": "Brasil"
     },
     {
-      "rank": 12,
-      "name": "Allgäuer57"
+      "rank": 13,
+      "name": "SK"
     },
     {
       "rank": 14,
-      "name": "Lady-Luck"
-    },
-    {
-      "rank": 15,
       "name": "Salimba"
     },
     {
-      "rank": 16,
+      "rank": 15,
       "name": "Biervorzehn"
+    },
+    {
+      "rank": 16,
+      "name": "Lady-Luck"
     },
     {
       "rank": 17,

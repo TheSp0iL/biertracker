@@ -1,5 +1,5 @@
 {
-  "updatedAt": "18.10.2026 16:13",
+  "updatedAt": "18.10.2026 19:05",
   "players": [
     {
       "rank": 1,
@@ -7,42 +7,38 @@
     },
     {
       "rank": 2,
-      "name": "Adrian"
-    },
-    {
-      "rank": 3,
       "name": "Alex"
     },
     {
-      "rank": 4,
-      "name": "SektQueen"
+      "rank": 3,
+      "name": "Adrian"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "name": "Elkebelke"
     },
     {
-      "rank": 6,
-      "name": "EuroEddi"
+      "rank": 5,
+      "name": "SektQueen"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "name": "Wolle"
     },
     {
-      "rank": 8,
-      "name": "Marlen"
+      "rank": 7,
+      "name": "EuroEddi"
     },
     {
-      "rank": 9,
+      "rank": 8,
       "name": "MiaSanBier"
     },
     {
-      "rank": 10,
-      "name": "VT"
+      "rank": 9,
+      "name": "Marlen"
     },
     {
-      "rank": 11,
+      "rank": 10,
       "name": "Allgäuer57"
     },
     {
@@ -50,16 +46,20 @@
       "name": "SK"
     },
     {
+      "rank": 12,
+      "name": "VT"
+    },
+    {
       "rank": 13,
       "name": "Brasil"
     },
     {
       "rank": 14,
-      "name": "Salimba"
+      "name": "Biervorzehn"
     },
     {
       "rank": 15,
-      "name": "Biervorzehn"
+      "name": "Salimba"
     },
     {
       "rank": 16,
@@ -67,11 +67,11 @@
     },
     {
       "rank": 17,
-      "name": "Lady-Luck"
+      "name": "Mino"
     },
     {
-      "rank": 18,
-      "name": "Mino"
+      "rank": 17,
+      "name": "Lady-Luck"
     }
   ]
 }

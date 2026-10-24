@@ -1,5 +1,5 @@
 {
-  "updatedAt": "24.10.2026 19:09",
+  "updatedAt": "24.10.2026 22:06",
   "players": [
     {
       "rank": 1,
@@ -19,15 +19,15 @@
     },
     {
       "rank": 5,
+      "name": "Marlen"
+    },
+    {
+      "rank": 6,
       "name": "SektQueen"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "Wolle"
-    },
-    {
-      "rank": 6,
-      "name": "Marlen"
     },
     {
       "rank": 8,
@@ -35,11 +35,11 @@
     },
     {
       "rank": 9,
-      "name": "Allgäuer57"
+      "name": "MiaSanBier"
     },
     {
       "rank": 10,
-      "name": "MiaSanBier"
+      "name": "Allgäuer57"
     },
     {
       "rank": 11,

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "25.10.2026 17:58",
+  "updatedAt": "25.10.2026 20:24",
   "players": [
     {
       "rank": 1,
@@ -19,23 +19,23 @@
     },
     {
       "rank": 5,
-      "name": "Marlen"
-    },
-    {
-      "rank": 6,
       "name": "SektQueen"
     },
     {
+      "rank": 6,
+      "name": "Marlen"
+    },
+    {
       "rank": 7,
-      "name": "Wolle"
+      "name": "MiaSanBier"
     },
     {
       "rank": 8,
-      "name": "EuroEddi"
+      "name": "Wolle"
     },
     {
       "rank": 9,
-      "name": "MiaSanBier"
+      "name": "EuroEddi"
     },
     {
       "rank": 10,
@@ -51,11 +51,11 @@
     },
     {
       "rank": 13,
-      "name": "Brasil"
+      "name": "Biervorzehn"
     },
     {
       "rank": 14,
-      "name": "Biervorzehn"
+      "name": "Brasil"
     },
     {
       "rank": 15,

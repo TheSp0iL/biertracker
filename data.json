@@ -1,5 +1,5 @@
 {
-  "updatedAt": "07.11.2026 14:44",
+  "updatedAt": "07.11.2026 19:11",
   "players": [
     {
       "rank": 1,
@@ -15,19 +15,19 @@
     },
     {
       "rank": 4,
+      "name": "Allgäuer57"
+    },
+    {
+      "rank": 4,
       "name": "EuroEddi"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "Alex"
     },
     {
-      "rank": 6,
-      "name": "SektQueen"
-    },
-    {
       "rank": 7,
-      "name": "Allgäuer57"
+      "name": "SektQueen"
     },
     {
       "rank": 8,
@@ -35,11 +35,11 @@
     },
     {
       "rank": 9,
-      "name": "Elkebelke"
+      "name": "Wolle"
     },
     {
-      "rank": 10,
-      "name": "Wolle"
+      "rank": 9,
+      "name": "Elkebelke"
     },
     {
       "rank": 11,
@@ -59,11 +59,11 @@
     },
     {
       "rank": 15,
-      "name": "Salimba"
+      "name": "MannohneHals"
     },
     {
       "rank": 16,
-      "name": "MannohneHals"
+      "name": "Salimba"
     },
     {
       "rank": 17,

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "08.11.2026 20:52",
+  "updatedAt": "09.11.2026 00:18",
   "players": [
     {
       "rank": 1,
@@ -15,27 +15,27 @@
     },
     {
       "rank": 4,
-      "name": "SektQueen"
-    },
-    {
-      "rank": 5,
-      "name": "MiaSanBier"
-    },
-    {
-      "rank": 6,
       "name": "Alex"
     },
     {
-      "rank": 7,
-      "name": "Elkebelke"
+      "rank": 5,
+      "name": "SektQueen"
     },
     {
-      "rank": 8,
+      "rank": 6,
       "name": "Allgäuer57"
     },
     {
-      "rank": 8,
+      "rank": 6,
       "name": "EuroEddi"
+    },
+    {
+      "rank": 8,
+      "name": "MiaSanBier"
+    },
+    {
+      "rank": 9,
+      "name": "Elkebelke"
     },
     {
       "rank": 10,

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "21.11.2026 15:46",
+  "updatedAt": "21.11.2026 21:19",
   "players": [
     {
       "rank": 1,
@@ -10,28 +10,28 @@
       "name": "Adrian"
     },
     {
-      "rank": 3,
-      "name": "Marlen"
-    },
-    {
-      "rank": 4,
-      "name": "Alex"
-    },
-    {
-      "rank": 5,
+      "rank": 2,
       "name": "SektQueen"
     },
     {
-      "rank": 6,
-      "name": "Allgäuer57"
+      "rank": 4,
+      "name": "Marlen"
+    },
+    {
+      "rank": 5,
+      "name": "MiaSanBier"
     },
     {
       "rank": 6,
+      "name": "Alex"
+    },
+    {
+      "rank": 7,
       "name": "EuroEddi"
     },
     {
       "rank": 8,
-      "name": "MiaSanBier"
+      "name": "Allgäuer57"
     },
     {
       "rank": 9,
@@ -47,23 +47,23 @@
     },
     {
       "rank": 12,
-      "name": "SK"
-    },
-    {
-      "rank": 13,
       "name": "Biervorzehn"
     },
     {
-      "rank": 14,
+      "rank": 13,
       "name": "Brasil"
     },
     {
+      "rank": 14,
+      "name": "SK"
+    },
+    {
       "rank": 15,
-      "name": "MannohneHals"
+      "name": "Salimba"
     },
     {
       "rank": 16,
-      "name": "Salimba"
+      "name": "MannohneHals"
     },
     {
       "rank": 17,
